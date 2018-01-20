@@ -19,18 +19,22 @@ public class MainController : MonoBehaviour {
 	{
 		
 	}
+
 	public void OnClickOptionBtn()
 	{
 
 	}
+
 	public void OnClickNewGameBtn()
 	{
 
 	}
+
 	public void OnClickContinueBtn()
 	{
 
 	}
+
 	public void OnClickShopBtn()
 	{
 

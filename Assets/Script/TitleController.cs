@@ -35,32 +35,6 @@ public class TitleController : MonoBehaviour {
 		).OnComplete(() => SetTextAlpha());
 	}
 
-	/*
-	IEnumerator SplashDoing()
-	{
-		Color targetColor = bgImage.color;
-		targetColor.a = 0;
-		bgImage.color = targetColor;
-		yield return new WaitForSeconds(0.5f);
-		float duration = 3.0f;
-		SetAlpha(1, duration, Ease.InFlash);
-		yield return new WaitForSeconds(duration + 1.5f);
-		duration = 1.5f;
-		SetAlpha(0, duration, Ease.Linear);
-		yield return new WaitForSeconds(duration + 0.5f);
-	}
-
-	private void SetAlpha(float targetAlpha, float duration , Ease easeStyle)
-	{
-		DOTween.ToAlpha(
-			() => bgImage.color,
-			color => bgImage.color = color,
-			targetAlpha,
-			duration
-		)
-			.SetEase(easeStyle);
-	}
-	*/
 	public void GoMainOn()
 	{
 		SceneManager.LoadScene("Main");
