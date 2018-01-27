@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c35316d78374e29844032fae0d291b, type: 3}
+  m_Name: InGameUI
+  m_EditorClassIdentifier: 
+  m_AtlasTexture: {fileID: 2800000, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  m_Values:
+  - {fileID: 21300000, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300002, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300004, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300006, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300008, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300010, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300012, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300014, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300016, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300018, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300020, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300022, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300024, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300026, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300028, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300030, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300032, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300034, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300036, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300038, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300040, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300042, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300044, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300046, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300048, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300050, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300052, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300054, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  m_Keys:
+  - attack-button
+  - blink
+  - button-1
+  - button-2
+  - button-3
+  - button-4
+  - button-5
+  - button-6
+  - button-7
+  - button-8
+  - button-9
+  - exclamationMark
+  - EXP
+  - fire
+  - gathering
+  - HP
+  - HP bar
+  - HP motion1
+  - HP motion2
+  - HP motion3
+  - HP motion4
+  - ice
+  - money
+  - money bar
+  - move-button
+  - move-button-1
+  - Necromancy
+  - vision
