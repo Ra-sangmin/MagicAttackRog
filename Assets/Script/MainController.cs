@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainController : MonoBehaviour {
 
@@ -28,12 +29,12 @@ public class MainController : MonoBehaviour {
 
 	public void OnClickNewGameBtn()
 	{
-
+		SceneManager.LoadScene("SelectCharacter");
 	}
 
 	public void OnClickContinueBtn()
 	{
-
+		SceneManager.LoadScene("SelectCharacter");
 	}
 
 	public void OnClickShopBtn()
