@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f16f2ac4acdf147f4be1854b81a076ba
-timeCreated: 1517057614
+timeCreated: 1517107593
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -16,6 +16,66 @@ TextureImporter:
     21300018: walk - left2
     21300020: walk - left3
     21300022: walk - left4
+    21300024: rest - behind1
+    21300026: rest - behind2
+    21300028: rest - behind3
+    21300030: rest - behind4
+    21300032: rest - front1
+    21300034: rest - front2
+    21300036: rest - front3
+    21300038: rest - front4
+    21300040: rest - left1
+    21300042: rest - left2
+    21300044: rest - left3
+    21300046: rest - left4
+    21300048: attack - behind1
+    21300050: attack - behind2
+    21300052: attack - behind3
+    21300054: attack - behind4
+    21300056: attack - front1
+    21300058: attack - front2
+    21300060: attack - front3
+    21300062: attack - front4
+    21300064: attack - left1
+    21300066: attack - left2
+    21300068: attack - left3
+    21300070: attack - left4
+    21300072: move attack - behind1
+    21300074: move attack - behind2
+    21300076: move attack - behind3
+    21300078: move attack - behind4
+    21300080: move attack - front1
+    21300082: move attack - front2
+    21300084: move attack - front3
+    21300086: move attack - front4
+    21300088: move attack - left1
+    21300090: move attack - left2
+    21300092: move attack - left3
+    21300094: move attack - left4
+    21300096: ability - behind1
+    21300098: ability - behind2
+    21300100: ability - behind3
+    21300102: ability - behind4
+    21300104: ability - front1
+    21300106: ability - front2
+    21300108: ability - front3
+    21300110: ability - front4
+    21300112: ability - left1
+    21300114: ability - left2
+    21300116: ability - left3
+    21300118: ability - left4
+    21300120: energybolt - behind1
+    21300122: energybolt - behind2
+    21300124: energybolt - behind3
+    21300126: energybolt - behind4
+    21300128: energybolt - front1
+    21300130: energybolt - front2
+    21300132: energybolt - front3
+    21300134: energybolt - front4
+    21300136: energybolt - left1
+    21300138: energybolt - left2
+    21300140: energybolt - left3
+    21300142: energybolt - left4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -39,7 +99,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -70,11 +130,724 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk - behind1
+      name: ability - behind1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - behind2
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - behind3
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - behind4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - front1
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 184
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - front2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 138
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - front3
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 92
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - front4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - left1
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - left2
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - left3
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ability - left4
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - behind1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - behind2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - behind3
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 184
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - behind4
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 138
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - front1
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 92
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - front2
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - front3
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - front4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 92
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - left1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 138
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - left2
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 184
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - left3
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 92
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: attack - left4
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 138
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - behind1
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 46
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - behind2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 230
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - behind3
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - behind4
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - front1
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 230
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - front2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 230
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - front3
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 230
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - front4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 230
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - left1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 230
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - left2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 230
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - left3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 230
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: energybolt - left4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - behind1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 92
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - behind2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - behind3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - behind4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 184
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - front1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 138
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - front2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 92
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - front3
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - front4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - left1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 184
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - left2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 138
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - left3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 92
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: move attack - left4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - behind1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - behind2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - behind3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - behind4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - front1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - front2
       rect:
         serializedVersion: 2
         x: 0
@@ -82,7 +855,98 @@ TextureImporter:
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - front3
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - front4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 184
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - left1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 138
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - left2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 92
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - left3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 46
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: rest - left4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: walk - behind1
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 184
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -90,12 +954,12 @@ TextureImporter:
       name: walk - behind2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 46
+        x: 175
+        y: 138
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -103,12 +967,12 @@ TextureImporter:
       name: walk - behind3
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
+        x: 175
+        y: 92
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -116,12 +980,12 @@ TextureImporter:
       name: walk - behind4
       rect:
         serializedVersion: 2
-        x: 35
+        x: 175
         y: 46
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -129,12 +993,12 @@ TextureImporter:
       name: walk - front1
       rect:
         serializedVersion: 2
-        x: 70
+        x: 175
         y: 0
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -142,12 +1006,12 @@ TextureImporter:
       name: walk - front2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 46
+        x: 140
+        y: 184
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -155,12 +1019,12 @@ TextureImporter:
       name: walk - front3
       rect:
         serializedVersion: 2
-        x: 105
-        y: 0
+        x: 140
+        y: 138
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -168,12 +1032,12 @@ TextureImporter:
       name: walk - front4
       rect:
         serializedVersion: 2
-        x: 105
-        y: 46
+        x: 140
+        y: 92
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -182,11 +1046,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 140
-        y: 0
+        y: 46
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -194,12 +1058,12 @@ TextureImporter:
       name: walk - left2
       rect:
         serializedVersion: 2
-        x: 175
+        x: 140
         y: 0
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -207,12 +1071,12 @@ TextureImporter:
       name: walk - left3
       rect:
         serializedVersion: 2
-        x: 210
-        y: 0
+        x: 105
+        y: 184
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
@@ -220,12 +1084,12 @@ TextureImporter:
       name: walk - left4
       rect:
         serializedVersion: 2
-        x: 140
-        y: 46
+        x: 105
+        y: 138
         width: 33
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 16.5, y: 22}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1

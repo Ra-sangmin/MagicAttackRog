@@ -10,13 +10,22 @@ public class Character : MonoBehaviour {
 	[SerializeField] JoyStic joyStic;
 
 	private MoveEnum moveEnum;
+	private MoveEnum beforeMoveEnum;
+	private CharacterState characterState;
 
 	private float moveSpeed = 1f;
 
-	private float animChangeMaxDelay = 0.4f;
+	private float restMaxDelay = 1f;
+	private float restCurrentDelay = 0.0f;
+
+	private float animChangeMaxDelay = 0.1f;
 	private float animChangeCurrentDelay = 0.0f;
 
-	int animState = 0;
+	private int animState = 0;
+	private Queue<int> attackAnimStateQueue = new Queue<int>();
+	[SerializeField] RectTransform missileParant;
+	[SerializeField] RectTransform missilePrefabs;
+
 
 	// Use this for initialization
 	void Start () {
@@ -31,43 +40,87 @@ public class Character : MonoBehaviour {
 
 	private void CharacterMoveOn(MoveEnum moveEnum)
 	{
+		if(this.moveEnum == moveEnum)
+			return;
+		
+		if(moveEnum == MoveEnum.None)
+		{
+			beforeMoveEnum = this.moveEnum;
+		}
 		this.moveEnum = moveEnum;
 
-		string moveImage = "walk - front1";
 		animState = 0;
-		float rotY = moveEnum == MoveEnum.Right ? 180 : 0;
+
+		bool rightOn =	moveEnum == MoveEnum.Right ||
+		               	moveEnum == MoveEnum.None && beforeMoveEnum == MoveEnum.Right;
+
+		float rotY = rightOn ? 180 : 0;
+		image.transform.localRotation = Quaternion.Euler (new Vector3 (0, rotY, 0));
 
 		AnimReset ();	
 
-		image.transform.localRotation = Quaternion.Euler (new Vector3 (0, rotY, 0));
+		characterState = moveEnum == MoveEnum.None ? CharacterState.None : CharacterState.Move;
 
-	}
-
-	private string GetAnimName(MoveEnum moveEnum)
-	{
-		string animName = "";
-		switch(moveEnum)
-		{
-		case MoveEnum.Down: 
-		case MoveEnum.None: 
-			animName = "walk - front";
-			break;
-		case MoveEnum.Up: 
-			animName = "walk - behind";
-			break;
-		case MoveEnum.Left:
-		case MoveEnum.Right:
-			animName = "walk - left";
-			break;
-		}
-
-		return animName;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		InputCheck ();
 		MoveCheck ();
 		AnimChangeCheck ();
+	}
+
+	void InputCheck ()
+	{
+		if(Input.GetKeyDown(KeyCode.Space))
+		{
+			OnClickAttackBtn ();
+		}
+
+		if(Input.GetKey(KeyCode.UpArrow))
+		{
+			CharacterMoveOn (MoveEnum.Up);
+		}
+		else if(Input.GetKey(KeyCode.DownArrow))
+		{
+			CharacterMoveOn (MoveEnum.Down);
+		}
+		else if(Input.GetKey(KeyCode.LeftArrow))
+		{
+			CharacterMoveOn (MoveEnum.Left);
+		}
+		else if(Input.GetKey(KeyCode.RightArrow))
+		{
+			CharacterMoveOn (MoveEnum.Right);
+		}
+
+		if(Input.GetKeyUp(KeyCode.RightArrow) ||
+			Input.GetKeyUp(KeyCode.LeftArrow)||
+			Input.GetKeyUp(KeyCode.UpArrow)||
+			Input.GetKeyUp(KeyCode.DownArrow))
+		{
+			if(!Input.GetKey(KeyCode.RightArrow)||
+				!Input.GetKey(KeyCode.LeftArrow)||
+				!Input.GetKey(KeyCode.UpArrow)||
+				!Input.GetKey(KeyCode.DownArrow))
+			{
+				CharacterMoveOn (MoveEnum.None);	
+			}
+		}
+	}
+
+	private void RestDeleyCheck ()
+	{
+		if (characterState == CharacterState.None ||
+			characterState == CharacterState.Move)
+			return;
+		
+		restCurrentDelay -= Time.deltaTime;
+
+		if(restCurrentDelay < 0)
+		{
+			characterState = CharacterState.None;
+		}
 	}
 
 	private void MoveCheck ()
@@ -98,15 +151,32 @@ public class Character : MonoBehaviour {
 
 	private void AnimChangeCheck ()
 	{
-		if (moveEnum == MoveEnum.None)
-			return;
-
-		animChangeCurrentDelay -= Time.deltaTime;
-
-		if(animChangeCurrentDelay < 0)
+		if (attackAnimStateQueue.Count != 0) 
 		{
-			animChangeCurrentDelay = animChangeMaxDelay;
-			NextImageReset ();
+			animState = attackAnimStateQueue.Dequeue();
+			AnimReset ();
+
+			bool necromancy = false;
+
+			if(animState % 2 == 0 || necromancy)
+			{
+				MissileCreate ();
+			}
+
+			if(attackAnimStateQueue.Count == 0)
+			{
+				characterState = moveEnum == MoveEnum.None ? CharacterState.None : CharacterState.Move;
+			}
+		} 
+		else 
+		{
+			animChangeCurrentDelay -= Time.deltaTime;
+
+			if(animChangeCurrentDelay < 0)
+			{
+				animChangeCurrentDelay = animChangeMaxDelay;
+				NextImageReset ();
+			}	
 		}
 	}
 
@@ -115,15 +185,89 @@ public class Character : MonoBehaviour {
 		animState++;
 
 		if(animState == 4)
-		{
 			animState = 0;
-		}
+
 		AnimReset ();
 	}
 
 	private void AnimReset()
 	{
-		string animName = GetAnimName (moveEnum) + (animState + 1);
+		string chaStateName = GetChaStateAnimName ();
+		string moveName = moveEnum == MoveEnum.None ? GetMoveName(beforeMoveEnum) : GetMoveName(moveEnum);
+		int animStateNum = animState + 1;
+	
+		string animName = string.Format ("{0} - {1}{2}", chaStateName, moveName, animStateNum);
+
 		image.spriteName = animName;
 	}
+
+	private string GetChaStateAnimName()
+	{
+		string chaStateName = "";
+		switch(characterState)
+		{
+			case CharacterState.None:
+				chaStateName = "rest";
+				break;
+			case CharacterState.Move:
+				chaStateName = "walk";
+				break;
+			case CharacterState.Attack:
+				chaStateName = "attack";
+				break;
+			case CharacterState.MoveAttack:
+				chaStateName = "move attack";
+				break;
+		}
+		return chaStateName;
+	}
+
+	private string GetMoveName(MoveEnum moveEnumValue)
+	{
+		string moveName = "";
+		switch(moveEnumValue)
+		{
+			case MoveEnum.None: 
+			case MoveEnum.Down: 
+				moveName = "front";
+				break;
+			case MoveEnum.Up: 
+				moveName = "behind";
+				break;
+			case MoveEnum.Left:
+			case MoveEnum.Right:
+				moveName = "left";
+				break;
+		}
+
+		return moveName;
+	}
+
+	private void MissileCreate ()
+	{
+		RectTransform missileObj = Instantiate(missilePrefabs, missileParant); 
+		Missile missile = missileObj.GetComponent<Missile> ();
+		missile.transform.position = transform.position;
+
+		MoveEnum setMoveEnum = moveEnum == MoveEnum.None ? beforeMoveEnum : moveEnum;
+		missile.SetData (setMoveEnum);
+	}
+
+	public void OnClickAttackBtn()
+	{
+		characterState = characterState == CharacterState.Move ? CharacterState.MoveAttack : CharacterState.Attack;
+		int ranState = Random.Range (0, 2) * 2;
+
+		attackAnimStateQueue.Enqueue (ranState);
+		attackAnimStateQueue.Enqueue (ranState+1);
+	}
+
+}
+
+public enum CharacterState
+{
+	None,
+	Move,
+	Attack,
+	MoveAttack
 }
