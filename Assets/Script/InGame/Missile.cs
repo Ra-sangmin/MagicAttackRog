@@ -10,6 +10,9 @@ public class Missile : MonoBehaviour {
 	private MoveEnum moveEnum;
 	private float moveSpeed = 3f;
 
+	private float moveMaxDelay = 0.8f;
+	private float moveCurrentDelay = 0f;
+
 	private float animChangeMaxDelay = 0.1f;
 	private float animChangeCurrentDelay = 0.0f;
 	private int animState = 0;
@@ -32,18 +35,19 @@ public class Missile : MonoBehaviour {
 		Vector2 moveValue = Vector2.zero;
 
 		switch(moveEnum)
-		{
-			case MoveEnum.Down: 
-				moveValue = new Vector2 (0, -1);
-				break;
-			case MoveEnum.Up: 
-				moveValue = new Vector2 (0, 1);
-				break;
+		{	
 			case MoveEnum.Left: 
 				moveValue = new Vector2 (-1, 0);
 				break;
 			case MoveEnum.Right:
 				moveValue = new Vector2 (-1, 0);
+				break;
+			case MoveEnum.Up: 
+				moveValue = new Vector2 (0, 1);
+				break;
+			case MoveEnum.Down:
+			default:
+				moveValue = new Vector2 (0, -1);
 				break;
 		}
 

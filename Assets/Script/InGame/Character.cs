@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mobcast.Coffee.UI;
 using UniRx;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour {
+	
+	[SerializeField] Camera cam;
 
 	[SerializeField] AtlasImage image;
 	[SerializeField] JoyStic joyStic;
 
 	private MoveEnum moveEnum;
 	private MoveEnum beforeMoveEnum;
-	private CharacterState characterState;
+	public CharacterState characterState;
 
 	private float moveSpeed = 1f;
 
-	private float restMaxDelay = 1f;
-	private float restCurrentDelay = 0.0f;
-
-	private float animChangeMaxDelay = 0.1f;
-	private float animChangeCurrentDelay = 0.0f;
+	private Delay moveDelay;
+	private Delay restDelay;
+	private Delay animChangeDelay;
 
 	private int animState = 0;
 	private Queue<int> attackAnimStateQueue = new Queue<int>();
@@ -31,11 +32,27 @@ public class Character : MonoBehaviour {
 	void Start () {
 
 		SetEvent ();
+		SetDelayData ();
 	}
 
 	private void SetEvent ()
 	{
-		joyStic.moveEnum.Subscribe (CharacterMoveOn);
+		joyStic.moveEnum.Subscribe (CharacterMoveOn)
+			.AddTo(gameObject);
+	}
+
+	private void SetDelayData ()
+	{
+		moveDelay = new Delay (0.8f);
+		restDelay = new Delay (1);
+		animChangeDelay = new Delay (0.1f);
+	}
+
+	void OnDestroy()
+	{
+		DelayManager.Instance.RemoveDelayData (moveDelay);
+		DelayManager.Instance.RemoveDelayData (restDelay);
+		DelayManager.Instance.RemoveDelayData (animChangeDelay);
 	}
 
 	private void CharacterMoveOn(MoveEnum moveEnum)
@@ -107,6 +124,11 @@ public class Character : MonoBehaviour {
 				CharacterMoveOn (MoveEnum.None);	
 			}
 		}
+
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			SceneManager.LoadScene("Main");
+		}
 	}
 
 	private void RestDeleyCheck ()
@@ -114,13 +136,10 @@ public class Character : MonoBehaviour {
 		if (characterState == CharacterState.None ||
 			characterState == CharacterState.Move)
 			return;
-		
-		restCurrentDelay -= Time.deltaTime;
 
-		if(restCurrentDelay < 0)
-		{
+		if (!restDelay.delayOn) 
 			characterState = CharacterState.None;
-		}
+		
 	}
 
 	private void MoveCheck ()
@@ -146,8 +165,12 @@ public class Character : MonoBehaviour {
 				break;
 		}
 
-		transform.Translate (moveValue * Time.deltaTime * 20 * moveSpeed);
+		if (!moveDelay.delayOn) 
+		{
+			transform.Translate (moveValue * Time.deltaTime * 20 * moveSpeed);	
+		} 
 	}
+
 
 	private void AnimChangeCheck ()
 	{
@@ -170,13 +193,11 @@ public class Character : MonoBehaviour {
 		} 
 		else 
 		{
-			animChangeCurrentDelay -= Time.deltaTime;
-
-			if(animChangeCurrentDelay < 0)
+			if(!animChangeDelay.delayOn)
 			{
-				animChangeCurrentDelay = animChangeMaxDelay;
 				NextImageReset ();
-			}	
+				animChangeDelay.SetDelay ();
+			}
 		}
 	}
 
@@ -260,6 +281,8 @@ public class Character : MonoBehaviour {
 
 		attackAnimStateQueue.Enqueue (ranState);
 		attackAnimStateQueue.Enqueue (ranState+1);
+
+		moveDelay.SetDelay ();
 	}
 
 }
