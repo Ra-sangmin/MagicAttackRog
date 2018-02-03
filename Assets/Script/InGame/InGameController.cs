@@ -5,7 +5,10 @@ using UnityEngine;
 public class InGameController : MonoBehaviour {
 
 	[SerializeField] MapLoadManager mapLM;
+	[SerializeField] Character character;
 	[SerializeField] CharacterCamera chaCam;
+	[SerializeField] MonsterManager monsterM;
+
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +19,12 @@ public class InGameController : MonoBehaviour {
 	private void MapLoad(int index)
 	{
 		mapLM.MapChange (index);
-		chaCam.MapSizeCheck (mapLM.GetCurrentMap ().sizeDelta);
+
+		Map currentMap = mapLM.GetCurrentMap ();
+		RectTransform mapRect = currentMap.transform as RectTransform;
+		chaCam.MapSizeCheck (mapRect.sizeDelta);
+
+		monsterM.MonsterSpawnSet (currentMap.GetMonsterSpawnList(),character);
 	}
 
 	// Update is called once per frame

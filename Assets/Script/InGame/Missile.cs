@@ -8,7 +8,7 @@ public class Missile : MonoBehaviour {
 	[SerializeField] AtlasImage image;
 
 	private MoveEnum moveEnum;
-	private float moveSpeed = 3f;
+	private float moveSpeed = 1.5f;
 
 	private float moveMaxDelay = 0.8f;
 	private float moveCurrentDelay = 0f;
@@ -16,6 +16,8 @@ public class Missile : MonoBehaviour {
 	private float animChangeMaxDelay = 0.1f;
 	private float animChangeCurrentDelay = 0.0f;
 	private int animState = 0;
+
+	bool destroyOn;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +30,8 @@ public class Missile : MonoBehaviour {
 
 		float rotY = this.moveEnum == MoveEnum.Right ? 180 : 0;
 		image.transform.localRotation = Quaternion.Euler (new Vector3 (0, rotY, 0));
+
+		Destroy (gameObject, 5);
 	}
 
 	private void MoveCheck ()
@@ -110,5 +114,19 @@ public class Missile : MonoBehaviour {
 		}
 
 		return moveName;
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if(destroyOn)
+			return;
+		
+		if(col.gameObject.tag == "Monster")
+		{
+			col.GetComponent<Monster> ().DamageOn ();
+			Destroy (gameObject);
+
+			destroyOn = true;
+		}	
 	}
 }

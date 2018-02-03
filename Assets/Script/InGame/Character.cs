@@ -292,5 +292,6 @@ public enum CharacterState
 	None,
 	Move,
 	Attack,
-	MoveAttack
+	MoveAttack,
+	Die
 }

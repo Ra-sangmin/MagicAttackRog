@@ -6,7 +6,7 @@ using System.Linq;
 
 public class MapLoadManager : MonoBehaviour {
 	
-	private Dictionary<int,RectTransform> mapDic = new Dictionary<int, RectTransform>();
+	private Dictionary<int,Map> mapDic = new Dictionary<int, Map>();
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +32,7 @@ public class MapLoadManager : MonoBehaviour {
 		}
 		else
 		{
-			RectTransform mapObj = Instantiate (Resources.Load<RectTransform> ("Map/Map_" + index));	
+			Map mapObj = Instantiate (Resources.Load<Map> ("Map/Map_" + index));	
 			mapObj.transform.parent = transform;
 			mapObj.transform.localPosition = Vector3.zero;
 			mapObj.transform.localScale = Vector3.one;
@@ -41,7 +41,7 @@ public class MapLoadManager : MonoBehaviour {
 		}
 	}
 
-	public RectTransform GetCurrentMap()
+	public Map GetCurrentMap()
 	{
 		return mapDic [GameDataManager.Instance.mapIndex];
 	}

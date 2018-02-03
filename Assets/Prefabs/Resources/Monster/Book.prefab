@@ -9,61 +9,40 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1571360711811358}
+  m_RootGameObject: {fileID: 1123981095279984}
   m_IsPrefabParent: 1
---- !u!1 &1571360711811358
+--- !u!1 &1123981095279984
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 224085397375956202}
-  - component: {fileID: 222348196077134752}
-  - component: {fileID: 114479123288526134}
-  - component: {fileID: 114863086549522160}
-  - component: {fileID: 61770519907366686}
-  - component: {fileID: 50089533183125704}
-  m_Layer: 5
-  m_Name: Energybolt
-  m_TagString: Untagged
+  - component: {fileID: 224343494641204900}
+  - component: {fileID: 222715704088455254}
+  - component: {fileID: 114902973419903746}
+  - component: {fileID: 114746475904297566}
+  - component: {fileID: 61073046533287774}
+  m_Layer: 0
+  m_Name: Book
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &50089533183125704
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571360711811358}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &61770519907366686
+--- !u!61 &61073046533287774
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571360711811358}
+  m_GameObject: {fileID: 1123981095279984}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -74,14 +53,14 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 20, y: 20}
   m_EdgeRadius: 0
---- !u!114 &114479123288526134
+--- !u!114 &114746475904297566
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571360711811358}
+  m_GameObject: {fileID: 1123981095279984}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d05abd37f79ce47afa24af8c80c92c0a, type: 3}
@@ -89,13 +68,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300128, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  m_Sprite: {fileID: 21300040, guid: 937b0b6def71e48398c28e0a03340388, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -103,41 +82,41 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_SpriteName: energybolt - front1
-  m_Atlas: {fileID: 11400000, guid: 765ad1a70d22f441c928ad5acfdcea28, type: 2}
---- !u!114 &114863086549522160
+  m_SpriteName: book_attack_1
+  m_Atlas: {fileID: 11400000, guid: e64ca087583c5450d95226bd2fea900f, type: 2}
+--- !u!114 &114902973419903746
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571360711811358}
+  m_GameObject: {fileID: 1123981095279984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2bdf8690072d4d75bbf8406373543aa, type: 3}
+  m_Script: {fileID: 11500000, guid: a0b4508f697fd4bc6a1bb91cb1c3b6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 114479123288526134}
---- !u!222 &222348196077134752
+  image: {fileID: 114746475904297566}
+--- !u!222 &222715704088455254
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571360711811358}
---- !u!224 &224085397375956202
+  m_GameObject: {fileID: 1123981095279984}
+--- !u!224 &224343494641204900
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571360711811358}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 1123981095279984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96, y: -8}
-  m_SizeDelta: {x: 19, y: 19}
+  m_AnchoredPosition: {x: 134.4, y: 0}
+  m_SizeDelta: {x: 21, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
