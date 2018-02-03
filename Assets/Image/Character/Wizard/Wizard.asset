@@ -13,54 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AtlasTexture: {fileID: 2800000, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   m_Values:
-  - {fileID: 21300000, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300002, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300004, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300006, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300008, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300010, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300012, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300014, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300016, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300018, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300020, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300022, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300024, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300026, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300028, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300030, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300032, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300034, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300036, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300038, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300040, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300042, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300044, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300046, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300048, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300050, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300052, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300054, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300056, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300058, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300060, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300062, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300064, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300066, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300068, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300070, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300072, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300074, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300076, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300078, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300080, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300082, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300084, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300086, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300088, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300090, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300092, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
-  - {fileID: 21300094, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300096, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300098, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300100, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
@@ -73,6 +25,18 @@ MonoBehaviour:
   - {fileID: 21300114, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300116, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300118, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300048, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300050, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300052, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300054, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300056, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300058, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300060, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300062, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300064, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300066, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300068, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300070, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300120, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300122, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300124, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
@@ -85,55 +49,43 @@ MonoBehaviour:
   - {fileID: 21300138, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300140, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   - {fileID: 21300142, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300072, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300074, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300076, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300078, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300080, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300082, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300084, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300086, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300088, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300090, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300092, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300094, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300024, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300026, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300028, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300030, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300032, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300034, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300036, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300038, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300040, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300042, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300044, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300046, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300000, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300002, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300004, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300006, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300008, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300010, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300012, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300014, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300016, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300018, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300020, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
+  - {fileID: 21300022, guid: f16f2ac4acdf147f4be1854b81a076ba, type: 3}
   m_Keys:
-  - walk - behind1
-  - walk - behind2
-  - walk - behind3
-  - walk - behind4
-  - walk - front1
-  - walk - front2
-  - walk - front3
-  - walk - front4
-  - walk - left1
-  - walk - left2
-  - walk - left3
-  - walk - left4
-  - rest - behind1
-  - rest - behind2
-  - rest - behind3
-  - rest - behind4
-  - rest - front1
-  - rest - front2
-  - rest - front3
-  - rest - front4
-  - rest - left1
-  - rest - left2
-  - rest - left3
-  - rest - left4
-  - attack - behind1
-  - attack - behind2
-  - attack - behind3
-  - attack - behind4
-  - attack - front1
-  - attack - front2
-  - attack - front3
-  - attack - front4
-  - attack - left1
-  - attack - left2
-  - attack - left3
-  - attack - left4
-  - move attack - behind1
-  - move attack - behind2
-  - move attack - behind3
-  - move attack - behind4
-  - move attack - front1
-  - move attack - front2
-  - move attack - front3
-  - move attack - front4
-  - move attack - left1
-  - move attack - left2
-  - move attack - left3
-  - move attack - left4
   - ability - behind1
   - ability - behind2
   - ability - behind3
@@ -146,6 +98,18 @@ MonoBehaviour:
   - ability - left2
   - ability - left3
   - ability - left4
+  - attack - behind1
+  - attack - behind2
+  - attack - behind3
+  - attack - behind4
+  - attack - front1
+  - attack - front2
+  - attack - front3
+  - attack - front4
+  - attack - left1
+  - attack - left2
+  - attack - left3
+  - attack - left4
   - energybolt - behind1
   - energybolt - behind2
   - energybolt - behind3
@@ -158,3 +122,39 @@ MonoBehaviour:
   - energybolt - left2
   - energybolt - left3
   - energybolt - left4
+  - move attack - behind1
+  - move attack - behind2
+  - move attack - behind3
+  - move attack - behind4
+  - move attack - front1
+  - move attack - front2
+  - move attack - front3
+  - move attack - front4
+  - move attack - left1
+  - move attack - left2
+  - move attack - left3
+  - move attack - left4
+  - rest - behind1
+  - rest - behind2
+  - rest - behind3
+  - rest - behind4
+  - rest - front1
+  - rest - front2
+  - rest - front3
+  - rest - front4
+  - rest - left1
+  - rest - left2
+  - rest - left3
+  - rest - left4
+  - walk - behind1
+  - walk - behind2
+  - walk - behind3
+  - walk - behind4
+  - walk - front1
+  - walk - front2
+  - walk - front3
+  - walk - front4
+  - walk - left1
+  - walk - left2
+  - walk - left3
+  - walk - left4
