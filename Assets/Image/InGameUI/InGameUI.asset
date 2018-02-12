@@ -41,6 +41,8 @@ MonoBehaviour:
   - {fileID: 21300050, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
   - {fileID: 21300052, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
   - {fileID: 21300054, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300056, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300058, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
   m_Keys:
   - attack-button
   - blink
@@ -70,3 +72,5 @@ MonoBehaviour:
   - move-button-1
   - Necromancy
   - vision
+  - ability1
+  - ability2
