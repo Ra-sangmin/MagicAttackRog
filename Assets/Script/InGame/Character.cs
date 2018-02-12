@@ -14,7 +14,7 @@ public class Character : MonoBehaviour {
 	[SerializeField] JoyStic joyStic;
 
 	private MoveEnum moveEnum;
-	private MoveEnum beforeMoveEnum;
+	private MoveEnum beforeMoveEnum = MoveEnum.Down;
 	public CharacterState characterState;
 
 	private float moveSpeed = 1f;
@@ -32,6 +32,8 @@ public class Character : MonoBehaviour {
 	[SerializeField] RectTransform missilePrefabs;
 
 	public UnityAction portalOn;
+
+	private Item getReadyItem;
 
 	// Use this for initialization
 	void Start () {
@@ -166,6 +168,15 @@ public class Character : MonoBehaviour {
 		if (moveEnum == MoveEnum.None || this.attackOn)
 			return;
 
+
+		if (!moveDelay.delayOn) 
+		{
+			transform.Translate (GetMoveVector(moveEnum) * Time.deltaTime * 20 * moveSpeed);	
+		} 
+	}
+
+	private Vector2 GetMoveVector(MoveEnum moveEnum)
+	{
 		Vector2 moveValue = Vector2.zero;
 
 		switch(moveEnum)
@@ -184,10 +195,8 @@ public class Character : MonoBehaviour {
 				break;
 		}
 
-		if (!moveDelay.delayOn) 
-		{
-			transform.Translate (moveValue * Time.deltaTime * 20 * moveSpeed);	
-		} 
+		return moveValue;
+
 	}
 
 
@@ -313,6 +322,24 @@ public class Character : MonoBehaviour {
 		attackDelay.SetDelay ();
 	}
 
+	public void OnClickBlink()
+	{
+		MoveEnum currentMoveEnum = moveEnum == MoveEnum.None ? beforeMoveEnum : moveEnum;
+
+		float blinkMoveValue = 10;
+
+		transform.Translate (GetMoveVector(currentMoveEnum) * blinkMoveValue);	
+	}
+	public void OnClickGathering()
+	{
+		Debug.LogWarning("OnClickGathering");
+
+		if(getReadyItem)
+		{
+			Destroy (getReadyItem.gameObject);
+		}
+	}
+
 
 	private void OnTriggerEnter2D(Collider2D col)
 	{
@@ -323,7 +350,24 @@ public class Character : MonoBehaviour {
 				portalOn ();
 			}
 		}
+		else if(col.tag == "Item")
+		{
+			getReadyItem = col.GetComponent<Item> ();
+		}
 	}
+
+	private void OnTriggerExit2D(Collider2D col)
+	{
+		if(col.tag == "Item")
+		{
+			if(getReadyItem == col.GetComponent<Item> () )
+			{
+				getReadyItem = null;
+			}
+		}
+	}
+
+
 
 }
 
