@@ -22,12 +22,12 @@ public class MapLoadManager : MonoBehaviour {
 	{
 		GameDataManager.Instance.mapIndex = index;
 
+		foreach (var mapObj in mapDic) {
+			mapObj.Value.gameObject.SetActive (false);
+		}
+
 		if(mapDic.ContainsKey(index))
 		{
-			foreach (var mapObj in mapDic) {
-				mapObj.Value.gameObject.SetActive (false);
-			}
-
 			mapDic [index].gameObject.SetActive (true);
 		}
 		else

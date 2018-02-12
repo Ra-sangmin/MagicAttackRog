@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mobcast.Coffee.UI;
+using UnityEngine.Events;
 
 public class Monster : MonoBehaviour {
 
@@ -22,6 +23,8 @@ public class Monster : MonoBehaviour {
 	private int animState = 0;
 	private Queue<int> attackAnimStateQueue = new Queue<int>();
 
+	private UnityAction<Monster> dieEvent;
+
 	// Use this for initialization
 	void Start () {
 		SetDelayData ();
@@ -41,7 +44,7 @@ public class Monster : MonoBehaviour {
 		DelayManager.Instance.RemoveDelayData (animChangeDelay);
 	}
 
-	public void SetTarget(Character target)
+	public void SetData(Character target, UnityAction<Monster> action)
 	{
 		this.target = target;
 
@@ -49,6 +52,8 @@ public class Monster : MonoBehaviour {
 		{
 			moveEnum = MoveEnum.Up;	
 		}
+
+		dieEvent = action;
 			
 	}
 
@@ -214,6 +219,11 @@ public class Monster : MonoBehaviour {
 		image.CrossFadeAlpha (0, 1, false);
 
 		yield return new WaitForSeconds (1);
+
+		if(dieEvent != null)
+		{
+			dieEvent (this);
+		}
 
 		Destroy (gameObject);
 	}

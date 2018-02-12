@@ -4,6 +4,7 @@ using UnityEngine;
 using Mobcast.Coffee.UI;
 using UniRx;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class Character : MonoBehaviour {
 	
@@ -18,7 +19,10 @@ public class Character : MonoBehaviour {
 
 	private float moveSpeed = 1f;
 
+	private bool attackOn;
+
 	private Delay moveDelay;
+	private Delay attackDelay;
 	private Delay restDelay;
 	private Delay animChangeDelay;
 
@@ -27,6 +31,7 @@ public class Character : MonoBehaviour {
 	[SerializeField] RectTransform missileParant;
 	[SerializeField] RectTransform missilePrefabs;
 
+	public UnityAction portalOn;
 
 	// Use this for initialization
 	void Start () {
@@ -43,7 +48,8 @@ public class Character : MonoBehaviour {
 
 	private void SetDelayData ()
 	{
-		moveDelay = new Delay (0.8f);
+		moveDelay = new Delay (0.1f);
+		attackDelay = new Delay (0.8f);
 		restDelay = new Delay (1);
 		animChangeDelay = new Delay (0.1f);
 	}
@@ -83,6 +89,7 @@ public class Character : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		InputCheck ();
+		AttackCheck ();
 		MoveCheck ();
 		AnimChangeCheck ();
 	}
@@ -91,7 +98,11 @@ public class Character : MonoBehaviour {
 	{
 		if(Input.GetKeyDown(KeyCode.Space))
 		{
-			OnClickAttackBtn ();
+			AttackOnSet (true);	
+		}
+		else if(Input.GetKeyUp(KeyCode.Space))
+		{
+			AttackOnSet (false);
 		}
 
 		if(Input.GetKey(KeyCode.UpArrow))
@@ -142,9 +153,17 @@ public class Character : MonoBehaviour {
 		
 	}
 
+	private void AttackCheck ()
+	{
+		if(this.attackOn)
+		{
+			OnClickAttackBtn ();
+		}
+	}
+
 	private void MoveCheck ()
 	{
-		if (moveEnum == MoveEnum.None)
+		if (moveEnum == MoveEnum.None || this.attackOn)
 			return;
 
 		Vector2 moveValue = Vector2.zero;
@@ -274,8 +293,16 @@ public class Character : MonoBehaviour {
 		missile.SetData (setMoveEnum);
 	}
 
+	public void AttackOnSet(bool attackOn)
+	{
+		this.attackOn = attackOn;
+	}
+
 	public void OnClickAttackBtn()
 	{
+		if(attackDelay.delayOn)
+			return;
+		
 		characterState = characterState == CharacterState.Move ? CharacterState.MoveAttack : CharacterState.Attack;
 		int ranState = Random.Range (0, 2) * 2;
 
@@ -283,6 +310,19 @@ public class Character : MonoBehaviour {
 		attackAnimStateQueue.Enqueue (ranState+1);
 
 		moveDelay.SetDelay ();
+		attackDelay.SetDelay ();
+	}
+
+
+	private void OnTriggerEnter2D(Collider2D col)
+	{
+		if(col.tag == "Portal")
+		{
+			if(portalOn != null)
+			{
+				portalOn ();
+			}
+		}
 	}
 
 }
