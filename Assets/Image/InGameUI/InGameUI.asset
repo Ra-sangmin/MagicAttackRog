@@ -43,6 +43,18 @@ MonoBehaviour:
   - {fileID: 21300054, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
   - {fileID: 21300056, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
   - {fileID: 21300058, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300060, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300062, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300064, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300066, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300068, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300070, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300072, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300074, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300076, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300078, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300080, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300082, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
   m_Keys:
   - attack-button
   - blink
@@ -74,3 +86,15 @@ MonoBehaviour:
   - vision
   - ability1
   - ability2
+  - portal_boss1
+  - portal_boss2
+  - portal_boss3
+  - portal_boss4
+  - portal_boss5
+  - portal_boss6
+  - portal_normal1
+  - portal_normal2
+  - portal_normal3
+  - portal_normal4
+  - portal_normal5
+  - portal_normal6

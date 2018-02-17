@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a01c975bd3b2e4924b189b665d37d705
-timeCreated: 1518441720
+timeCreated: 1518839270
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -34,6 +34,18 @@ TextureImporter:
     21300054: vision
     21300056: ability1
     21300058: ability2
+    21300060: portal_boss1
+    21300062: portal_boss2
+    21300064: portal_boss3
+    21300066: portal_boss4
+    21300068: portal_boss5
+    21300070: portal_boss6
+    21300072: portal_normal1
+    21300074: portal_normal2
+    21300076: portal_normal3
+    21300078: portal_normal4
+    21300080: portal_normal5
+    21300082: portal_normal6
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -119,8 +131,8 @@ TextureImporter:
       name: ability1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 144
+        x: 252
+        y: 31
         width: 34
         height: 34
       alignment: 0
@@ -132,8 +144,8 @@ TextureImporter:
       name: ability2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 108
+        x: 213
+        y: 204
         width: 34
         height: 34
       alignment: 0
@@ -146,7 +158,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 181
+        y: 204
         width: 48
         height: 48
       alignment: 0
@@ -158,8 +170,8 @@ TextureImporter:
       name: blink
       rect:
         serializedVersion: 2
-        x: 72
-        y: 180
+        x: 269
+        y: 67
         width: 15
         height: 16
       alignment: 0
@@ -171,8 +183,8 @@ TextureImporter:
       name: button-1
       rect:
         serializedVersion: 2
-        x: 216
-        y: 0
+        x: 174
+        y: 204
         width: 34
         height: 34
       alignment: 0
@@ -184,8 +196,8 @@ TextureImporter:
       name: button-2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 44
+        x: 102
+        y: 0
         width: 70
         height: 42
       alignment: 0
@@ -197,8 +209,8 @@ TextureImporter:
       name: button-3
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
+        x: 102
+        y: 44
         width: 70
         height: 42
       alignment: 0
@@ -210,8 +222,8 @@ TextureImporter:
       name: button-4
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
+        x: 102
+        y: 88
         width: 70
         height: 42
       alignment: 0
@@ -223,8 +235,8 @@ TextureImporter:
       name: button-5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 88
+        x: 102
+        y: 176
         width: 68
         height: 41
       alignment: 0
@@ -236,8 +248,8 @@ TextureImporter:
       name: button-6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 102
+        y: 132
         width: 70
         height: 42
       alignment: 0
@@ -249,8 +261,8 @@ TextureImporter:
       name: button-7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 231
+        x: 332
+        y: 0
         width: 40
         height: 21
       alignment: 0
@@ -262,8 +274,8 @@ TextureImporter:
       name: button-8
       rect:
         serializedVersion: 2
-        x: 42
-        y: 231
+        x: 446
+        y: 0
         width: 23
         height: 23
       alignment: 0
@@ -275,8 +287,8 @@ TextureImporter:
       name: button-9
       rect:
         serializedVersion: 2
-        x: 50
-        y: 181
+        x: 174
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -288,8 +300,8 @@ TextureImporter:
       name: exclamationMark
       rect:
         serializedVersion: 2
-        x: 252
-        y: 0
+        x: 493
+        y: 18
         width: 4
         height: 8
       alignment: 0
@@ -301,8 +313,8 @@ TextureImporter:
       name: EXP
       rect:
         serializedVersion: 2
-        x: 152
-        y: 66
+        x: 102
+        y: 252
         width: 70
         height: 4
       alignment: 0
@@ -314,8 +326,8 @@ TextureImporter:
       name: fire
       rect:
         serializedVersion: 2
-        x: 233
-        y: 75
+        x: 230
+        y: 240
         width: 15
         height: 16
       alignment: 0
@@ -327,8 +339,8 @@ TextureImporter:
       name: gathering
       rect:
         serializedVersion: 2
-        x: 216
-        y: 75
+        x: 213
+        y: 240
         width: 15
         height: 16
       alignment: 0
@@ -340,8 +352,8 @@ TextureImporter:
       name: HP
       rect:
         serializedVersion: 2
-        x: 144
-        y: 86
+        x: 432
+        y: 31
         width: 70
         height: 9
       alignment: 0
@@ -353,8 +365,8 @@ TextureImporter:
       name: HP bar
       rect:
         serializedVersion: 2
-        x: 72
-        y: 44
+        x: 252
+        y: 0
         width: 78
         height: 29
       alignment: 0
@@ -366,8 +378,8 @@ TextureImporter:
       name: HP motion1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 75
+        x: 360
+        y: 31
         width: 70
         height: 9
       alignment: 0
@@ -379,8 +391,8 @@ TextureImporter:
       name: HP motion2
       rect:
         serializedVersion: 2
-        x: 152
-        y: 55
+        x: 288
+        y: 31
         width: 70
         height: 9
       alignment: 0
@@ -392,8 +404,8 @@ TextureImporter:
       name: HP motion3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 44
+        x: 374
+        y: 11
         width: 70
         height: 9
       alignment: 0
@@ -405,8 +417,8 @@ TextureImporter:
       name: HP motion4
       rect:
         serializedVersion: 2
-        x: 144
-        y: 97
+        x: 374
+        y: 0
         width: 70
         height: 9
       alignment: 0
@@ -418,8 +430,8 @@ TextureImporter:
       name: ice
       rect:
         serializedVersion: 2
-        x: 241
-        y: 44
+        x: 252
+        y: 67
         width: 15
         height: 16
       alignment: 0
@@ -431,8 +443,8 @@ TextureImporter:
       name: money
       rect:
         serializedVersion: 2
-        x: 50
-        y: 153
+        x: 192
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -444,8 +456,8 @@ TextureImporter:
       name: money bar
       rect:
         serializedVersion: 2
-        x: 72
-        y: 75
+        x: 102
+        y: 219
         width: 70
         height: 31
       alignment: 0
@@ -457,8 +469,8 @@ TextureImporter:
       name: move-button
       rect:
         serializedVersion: 2
-        x: 0
-        y: 131
+        x: 51
+        y: 204
         width: 48
         height: 48
       alignment: 0
@@ -470,8 +482,8 @@ TextureImporter:
       name: move-button-1
       rect:
         serializedVersion: 2
-        x: 50
-        y: 131
+        x: 471
+        y: 0
         width: 20
         height: 20
       alignment: 0
@@ -483,8 +495,8 @@ TextureImporter:
       name: Necromancy
       rect:
         serializedVersion: 2
-        x: 50
-        y: 199
+        x: 493
+        y: 0
         width: 15
         height: 16
       alignment: 0
@@ -493,11 +505,167 @@ TextureImporter:
       outline: []
       tessellationDetail: -1
     - serializedVersion: 2
+      name: portal_boss1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 136
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_boss2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 68
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_boss3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_boss4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_boss5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_boss6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_normal1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 68
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_normal2
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_normal3
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 136
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_normal4
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 68
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_normal5
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: portal_normal6
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 136
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
       name: vision
       rect:
         serializedVersion: 2
-        x: 224
-        y: 44
+        x: 252
+        y: 85
         width: 15
         height: 16
       alignment: 0
