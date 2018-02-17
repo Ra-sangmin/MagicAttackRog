@@ -468,8 +468,9 @@ GameObject:
   m_Component:
   - component: {fileID: 224084893800904094}
   - component: {fileID: 222045350925515888}
-  - component: {fileID: 114578459037998646}
   - component: {fileID: 61972588498285150}
+  - component: {fileID: 114654339278442128}
+  - component: {fileID: 114749739242110438}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Portal
@@ -1189,33 +1190,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114578459037998646
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1998714469541004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19852942, g: 0.53569955, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
 --- !u!114 &114631435739022748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1243,6 +1217,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114654339278442128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998714469541004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe916ffb1ede44e8b4a14a339cb0fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTag: portal_normal
+  animChangeDelay: 0.1
 --- !u!114 &114668782168436428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1270,6 +1257,35 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114749739242110438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998714469541004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05abd37f79ce47afa24af8c80c92c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300072, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_SpriteName: portal_normal1
+  m_Atlas: {fileID: 11400000, guid: 8734ceca8dd364a89bfdf0b059c090a0, type: 2}
 --- !u!114 &114840921090099650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1419,15 +1435,15 @@ RectTransform:
   m_GameObject: {fileID: 1998714469541004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000306, y: 1.0000306, z: 1.0000306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224356205362866640}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00036621094, y: -0.00018310547}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 37, y: 66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224103885497592648
 RectTransform:
