@@ -55,6 +55,8 @@ MonoBehaviour:
   - {fileID: 21300078, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
   - {fileID: 21300080, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
   - {fileID: 21300082, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300084, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
+  - {fileID: 21300086, guid: a01c975bd3b2e4924b189b665d37d705, type: 3}
   m_Keys:
   - attack-button
   - blink
@@ -98,3 +100,5 @@ MonoBehaviour:
   - portal_normal4
   - portal_normal5
   - portal_normal6
+  - monsterHPbar
+  - monsterHPbar2
