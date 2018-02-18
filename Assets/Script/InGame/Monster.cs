@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mobcast.Coffee.UI;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class Monster : MonoBehaviour {
 
@@ -25,9 +26,14 @@ public class Monster : MonoBehaviour {
 
 	private UnityAction<Monster> dieEvent;
 
+	public int maxHp;
+	public int currentHp;
+	[SerializeField] AtlasImage hpImage;
+
 	// Use this for initialization
 	void Start () {
 		SetDelayData ();
+		SetMonsterData ();
 	}
 
 	private void SetDelayData ()
@@ -35,6 +41,12 @@ public class Monster : MonoBehaviour {
 		moveDelay = new Delay (0.8f);
 		restDelay = new Delay (1);
 		animChangeDelay = new Delay (0.1f);
+	}
+
+	private void SetMonsterData ()
+	{
+		maxHp = 2;
+		currentHp = 2;
 	}
 
 	void OnDestroy()
@@ -207,16 +219,30 @@ public class Monster : MonoBehaviour {
 
 	public void DamageOn()
 	{
-		gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+		currentHp--;
 
-		characterState = CharacterState.Die;
+		HPImageReset ();
 
-		StartCoroutine (DieEffect ());
+		if(currentHp <= 0)
+		{
+			characterState = CharacterState.Die;
+			gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+			StartCoroutine (DieEffect ());
+		}
+	}
+
+	private void HPImageReset()
+	{
+		float hpSliderValue = currentHp/ (float)maxHp;
+		hpSliderValue = Mathf.Clamp (hpSliderValue, 0, 1);
+		hpImage.fillAmount = hpSliderValue;
 	}
 
 	IEnumerator DieEffect()
 	{
-		image.CrossFadeAlpha (0, 1, false);
+		CanvasGroup canvasGroup = GetComponent<CanvasGroup> ();
+
+		DOTween.To (()=> canvasGroup.alpha, x=> canvasGroup.alpha = x, 0, 1);
 
 		yield return new WaitForSeconds (1);
 

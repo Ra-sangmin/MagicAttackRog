@@ -22,8 +22,19 @@ public class Map : MonoBehaviour {
 		return monsterSpawnList;
 	}
 
-	public void PortalActiveOn(bool active)
+	public void PortalActiveOn(bool active , bool nextBossOn = false)
 	{
 		portal.gameObject.SetActive (active);
+
+		if(active)
+		{
+			AtlasAnimation atlasAnimation = portal.GetComponent<AtlasAnimation> ();
+
+			string imageTag = nextBossOn ? "portal_boss" : "portal_normal";
+
+			atlasAnimation.SetImageTag (imageTag);
+
+			Debug.LogWarning (imageTag);
+		}
 	}
 }

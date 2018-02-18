@@ -34,17 +34,14 @@ public class InGameController : MonoBehaviour {
 	private void MonsterAllKillOn()
 	{
 		Map currentMap = mapLM.GetCurrentMap ();
-		currentMap.PortalActiveOn (true);
+
+		currentMap.PortalActiveOn (true , mapIndex == 1);	
 
 	}
 
 	private void NextMapCheck()
 	{
 		mapIndex++;
-
-		if(mapIndex == 2)
-			mapIndex = 0;
-		
 		MapLoad (mapIndex);
 	}
 

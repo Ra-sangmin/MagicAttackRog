@@ -32,7 +32,7 @@ public class AtlasAnimation : MonoBehaviour {
 	public void SetImageTag(string imageTag)
 	{
 		if(image == null)
-			return;
+			image = GetComponent<AtlasImage> ();
 
 		List<string> newNameList = new List<string> ();
 
@@ -42,7 +42,6 @@ public class AtlasAnimation : MonoBehaviour {
 
 			if(sprite.name.Length > imageTag.Length)
 			{
-				
 				char[] checkText = sprite.name.Remove (imageTag.Length).ToCharArray(); 
 
 				bool allMatch = true;
@@ -69,6 +68,7 @@ public class AtlasAnimation : MonoBehaviour {
 		if(newNameList.Count == 0)
 			return;
 
+		this.imageTag = imageTag;
 
 		newNameList.Sort ();
 		imageNameList = newNameList;
@@ -76,6 +76,7 @@ public class AtlasAnimation : MonoBehaviour {
 		animState = 0;
 		currentAnimDelay = animChangeDelay;
 		AnimReset ();
+		image.SetNativeSize ();
 	}
 	
 	// Update is called once per frame

@@ -9,7 +9,7 @@ public class MonsterManager : MonoBehaviour {
 	private Monster monster;
 	private Character target;
 
-	private int createCount = 5;
+	private int createCount = 1;
 
 	private bool createClear;
 	private List<Monster> monsterList = new List<Monster> ();
